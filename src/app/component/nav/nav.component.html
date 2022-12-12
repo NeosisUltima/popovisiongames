@@ -1,0 +1,15 @@
+<p-menubar [model]="items"></p-menubar>
+<p-dialog header="Logout" [(visible)]="logout" [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text">
+    Are you sure you want to Logout?
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="proceedLogout()" label="Yes" styleClass="p-button-text"></p-button>
+        <p-button icon="pi pi-times" (click)="logout=false" label="No"></p-button>
+    </ng-template>
+</p-dialog>
+<p-dialog header="Save" [(visible)]="saveInformation" [style]="{width: '50vw'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-text">
+    Would you like to retrieve your save data?
+    <ng-template pTemplate="footer">
+        <p-button icon="pi pi-check" (click)="savePlayer()" label="Yes" styleClass="p-button-text"></p-button>
+        <p-button icon="pi pi-times" (click)="logoutPlayer()" label="No"></p-button>
+    </ng-template>
+</p-dialog>

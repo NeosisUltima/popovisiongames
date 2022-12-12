@@ -1,0 +1,22 @@
+<div id="table-set">
+    <div *ngIf="LoggedIn" id="monstershowing">
+        <app-fighter-screen [width]=300 [height]="500" [character]="character" [atk]="character.characterChampion.atkStat" [def]="character.characterChampion.defStat" [spd]="character.characterChampion.spdStat"></app-fighter-screen>
+    </div>
+    <div *ngIf="LoggedIn" id="optionChoices">
+        <div>
+            <h5>Practice Fights</h5>
+            <p-dropdown id="dropdown" [options]="characterList.characters" [(ngModel)]="opponentChosen" placeholder="Opponent" optionLabel="characterName" name="Practice"></p-dropdown>
+            <button id="TrainBtn" pButton pRipple type="submit" *ngIf="opponentChosen!=undefined" (click)="train()" class="mr-2">Train with {{opponentChosen.charactername}}</button>
+        </div>
+        <div>
+            <h5>BackPack</h5>
+            <p-dropdown id="dropdown" [options]="backpack.items" [(ngModel)]="itemChosen" placeholder="Items" optionLabel="item" name="Items"></p-dropdown>
+            <button id="UseBtn" pButton pRipple type="submit" *ngIf="itemChosen!=undefined" (click)="use()" class="mr-2">Use (x{{itemChosen.quantity}} left)</button>
+        </div>
+    </div>
+</div>
+<div id="loginPlease">
+    <p-dialog header="Error" [(visible)]="!LoggedIn" (click)="returnToLogin()">
+        Please Login in order to use this page.
+    </p-dialog>
+</div>

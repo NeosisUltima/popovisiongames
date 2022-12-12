@@ -1,0 +1,59 @@
+<h4 class="header">Login</h4>
+<!-- <div class = "FileLoader">
+    <label for="fghtFile">Insert fght file here</label>
+    <input type="file" id="file" name="fghtFile" class="form-control" ngModel (change)="getFiles($event)">
+</div> -->
+<div class="LoginSpace" *ngIf="!generateFile">
+    <form #loginUserForm="ngForm" (ngSubmit)="onSubmit(loginUserForm)">
+        <div class="fileInput">
+            <label for="fghtFile" id="lbl">Insert .fght file here:</label>
+            <input type="file" id="fileInput" name="fghtFile" class="form-control" ngModel (change)="getFiles($event)" accept=".fght">
+        </div>
+        <br>
+        <div>
+            <button id="loginBtn" pButton pRipple type="submit" label="Login" [disabled]="!fileLocation" class="mr-2" (click)="readFileTextInformation()"></button>
+            <button id="registerBtn" pButton pRipple type="submit" label="Register" (click)="register()" class="mr-2"></button>
+            <p-messages (closable)="true"></p-messages>
+        </div>
+    </form>
+</div>
+<div class="SignUpSpace" *ngIf="generateFile">
+    <form #signUserForm="ngForm" (ngSubmit)="generate(signUserForm)">
+        <div class="fileInput">
+            <label for="nameInp" id="lbl">Enter your name: </label>
+            <input type="text" pInputText  id="fileInput" name="nameInp" class="form-control" ngModel>
+            <br>
+            <br>
+            <div id="imgSet">
+                <div id="tableDiv">
+                    <div id="fighterImg">
+                        <app-fighter-screen [width]=300 [height]="500" [fighterType]="selectedFighter" [red]="rVal" [green]="gVal" [blue]="bVal"></app-fighter-screen>
+                    </div>
+                    <div id="colorBar">
+                        <div><h5>Red: {{rVal}}</h5><p-slider [(ngModel)]="rVal" [min]="0" [max]="255" name="red"></p-slider></div>
+                        <div><h5>Green: {{gVal}}</h5><p-slider [(ngModel)]="gVal" [min]="0" [max]="255" name="green"></p-slider></div>
+                        <div><h5>Blue: {{bVal}}</h5><p-slider [(ngModel)]="bVal" [min]="0" [max]="255" name="blue"></p-slider></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <label for="fghtTyp" id="lbl">Choose Fighter Type </label>
+            <p-dropdown [options]="fighterType" [(ngModel)]="selectedFighter" placeholder="Select Fighter Type" optionLabel="currentFighterType" name="fightType"></p-dropdown>
+            <br>
+            <label for="fightInp" id="lbl">Enter your fighter name: </label>
+            <input type="text" pInputText  id="fileInput" name="fightInp" class="form-control" ngModel>
+
+        </div>
+        <br>
+        <div>
+            <button id="loginBtn" pButton pRipple type="submit" label="Login" class="mr-2" (click)="loginScreen()"></button>
+            <button *ngIf="!generateFile" id="registerBtn" pButton pRipple type="submit" label="Register" (click)="register()" class="mr-2"></button>
+            <button *ngIf="generateFile" id="exportBtn" pButton pRipple type="submit" label="Generate" class="mr-2"></button>
+            <p-messages (closable)="true"></p-messages>
+        </div>
+    </form>
+    <p-dialog header="Error" [(visible)]="formError">
+        {{ErrorMessage}}
+    </p-dialog>
+</div>

@@ -1,0 +1,93 @@
+{
+  "fighters":
+  [
+    {
+      "characterName": "Marney",
+      "characterChampion": {
+        "monsterName": "Piko",
+        "atkStat": 5,
+        "defStat": 3,
+        "spdStat": 4,
+        "currentFighterType": "IMP",
+        "r": 230,
+        "g": 145,
+        "b": 31
+      },
+      "numItemsGiven": 3,
+      "droppedItems": [
+        {
+          "itemName":"atkStat BOOST Lv 1"
+        },
+        {
+          "itemName":"defStat DRAIN Lv 1"
+        }
+      ]
+    },
+    {
+      "characterName": "Joey",
+      "characterChampion": {
+        "monsterName": "Remy",
+        "atkStat": 1,
+        "defStat": 1,
+        "spdStat": 2,
+        "currentFighterType": "IMP",
+        "r": 128,
+        "g": 15,
+        "b": 201
+      },
+      "numItemsGiven": 2,
+      "droppedItems": [
+        {
+          "itemName":"spdStat BOOST Lv 1"
+        },
+        {
+          "itemName":"atkStat DRAIN Lv 1"
+        }
+      ]
+    },
+    {
+      "characterName": "Claire",
+      "characterChampion": {
+        "monsterName": "Valkyrie",
+        "atkStat": 2,
+        "defStat": 1,
+        "spdStat": 1,
+        "currentFighterType": "DRAGON",
+        "r": 255,
+        "g": 3,
+        "b": 3
+      },
+      "numItemsGiven": 2,
+      "droppedItems": [
+        {
+          "itemName":"atkStat BOOST Lv 1"
+        },
+        {
+          "itemName":"defStat DRAIN Lv 1"
+        }
+      ]
+    },
+    {
+      "characterName": "Patrick",
+      "characterChampion": {
+        "monsterName": "Rocky",
+        "atkStat": 1,
+        "defStat": 2,
+        "spdStat": 1,
+        "currentFighterType": "Slime",
+        "r": 15,
+        "g": 255,
+        "b": 2
+      },
+      "numItemsGiven": 2,
+      "droppedItems": [
+        {
+          "itemName":"defStat BOOST Lv 1"
+        },
+        {
+          "itemName":"spdStat DRAIN Lv 1"
+        }
+      ]
+    }
+  ]
+}

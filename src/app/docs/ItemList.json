@@ -1,0 +1,46 @@
+{
+  "items": [
+    {
+      "itemName": "atkStat BOOST Lv 1",
+      "description": "Boosts your fighter attack by 1",
+      "atkBoost": 1,
+      "spdBoost": 0,
+      "defBoost": 0
+    },
+    {
+      "itemName": "spdStat BOOST Lv 1",
+      "description": "Boosts your fighter speed by 1",
+      "atkBoost": 0,
+      "spdBoost": 1,
+      "defBoost": 0
+    },
+    {
+      "itemName": "defStat BOOST Lv 1",
+      "description": "Boosts your fighter defense by 1",
+      "atkBoost": 0,
+      "spdBoost": 0,
+      "defBoost": 1
+    },
+    {
+      "itemName": "atkStat DRAIN Lv 1",
+      "description": "Drains your fighter attack by 1",
+      "atkBoost": -1,
+      "spdBoost": 0,
+      "defBoost": 0
+    },
+    {
+      "itemName": "spdStat DRAIN Lv 1",
+      "description": "Drains your fighter speed by 1",
+      "atkBoost": 0,
+      "spdBoost": -1,
+      "defBoost": 0
+    },
+    {
+      "itemName": "defStat DRAIN Lv 1",
+      "description": "Drains your fighter defense by 1",
+      "atkBoost": 0,
+      "spdBoost": 0,
+      "defBoost": -1
+    }
+  ]
+}

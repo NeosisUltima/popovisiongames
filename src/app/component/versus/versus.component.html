@@ -1,0 +1,30 @@
+
+<div id="OverallSetup">
+    <h4 class="header">Versus Mode</h4>
+    <br>
+    <app-fighter-screen [width]="300" [height]="500" [character]="data1"></app-fighter-screen>
+    <app-fighter-screen [width]="300" [height]="500" [character]="data2" [invert]="true"></app-fighter-screen>
+    <br>
+    <br>
+    <div id="OnePlayersNeeded" *ngIf="loggedIn">
+        <div class="fileInput">
+            <label for="fghtFile" id="lbl">Insert .fght file here P2:</label>
+            <input type="file" id="fileInput" name="fghtFile" class="form-control" (change)="importP2File($event)" ngModel accept=".fght">
+        </div>
+    </div>
+    <div id="TwoPlayersNeeded" *ngIf="!loggedIn">
+        <div class="fileInput">
+            <label for="fghtFileOne" id="lbl">Insert .fght file here P1:</label>
+            <input type="file" id="fileInput" name="fghtFileOne" class="form-control" (change)="importP1File($event)" ngModel accept=".fght">
+        </div>
+        <div class="fileInput">
+            <label for="fghtFileTwo" id="lbl">Insert .fght file here P2:</label>
+            <input type="file" id="fileInput" name="fghtFileTwo" class="form-control" (change)="importP2File($event)" ngModel accept=".fght">
+        </div>
+    </div>
+    <br>
+    <div>
+        <button id="battleBtn" pButton pRipple type="submit" label="Battle" [disabled]="!battlersSet" class="mr-2" (click)="beginBattle()"></button>
+        <p-messages (closable)="true"></p-messages>
+    </div>
+</div>
