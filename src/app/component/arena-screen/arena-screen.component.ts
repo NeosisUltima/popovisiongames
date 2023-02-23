@@ -441,7 +441,7 @@ export class ArenaScreenComponent implements OnInit,OnChanges{
   }
   else{
       this.p2wins =true;
-      return this.opp2.characterName + " won the battle against " + this.opp2.characterName + "!!!";
+      return this.opp2.characterName + " won the battle against " + this.opp1.characterName + "!!!";
   }
   }
 }
